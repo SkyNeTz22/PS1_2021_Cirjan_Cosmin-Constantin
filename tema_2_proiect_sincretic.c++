@@ -8,7 +8,7 @@ unsigned ora=9, zora=0, sec=0, zsec=5, min=9, zmin=5, indentare_pe_secunda=0;
 
 void setup()
 {
-	lcd.begin(16, 2);
+    lcd.begin(16, 2);
   
     TCCR1A = 0;
     TCCR1B = 0;
