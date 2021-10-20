@@ -93,7 +93,7 @@ ISR(TIMER1_COMPA_vect)
 void adc_init()  // Initializarea ADC
 {
     ADCSRA |= ((1<<ADPS2) | (1<<ADPS1) | (1<<ADPS0));
-    ADMUX |= (1<<REFS0);// AVcc + capacitor extern la pinul Atref
+    ADMUX |= (1<<REFS0);  // AVcc + capacitor extern la pinul Atref
     ADCSRA |= (1<<ADSC);	// incepe conversia ADC
 }
 
