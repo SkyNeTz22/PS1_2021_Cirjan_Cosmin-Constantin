@@ -9,6 +9,7 @@ unsigned ora=9, zora=0, sec=0, zsec=5, min=9, zmin=5, indentare_pe_secunda=0;
 void setup()
 {
 	lcd.begin(16, 2);
+  
     TCCR1A = 0;
     TCCR1B = 0;
     TCNT1  = 0;
@@ -19,6 +20,7 @@ void setup()
     // Se salveaza bitii CS12 si CS10 pentru un prescaler de 1024
     TCCR1B |= (1 << CS12) | (1 << CS10);	
     // de acum se poate compara intreruperea timer-ului
+    TIMSK1 |= (1 << OCIE1A);
 }
 
 void loop()
@@ -93,7 +95,8 @@ ISR(TIMER1_COMPA_vect)
 void adc_init()  // Initializarea ADC
 {
     ADCSRA |= ((1<<ADPS2) | (1<<ADPS1) | (1<<ADPS0));
-    ADMUX |= (1<<REFS0);  // AVcc + capacitor extern la pinul Atref
+    ADMUX |= (1<<REFS0);// AVcc + capacitor extern la pinul Atref
+    ADCSRA |= (1<<ADEN);// ADC - enable
     ADCSRA |= (1<<ADSC);	// incepe conversia ADC
 }
 
