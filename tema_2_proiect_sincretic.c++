@@ -74,8 +74,8 @@ void loop()
         indentare_pe_secunda = 0;
     }
  
-  	lcd.print(zora);      
-	lcd.print(ora);
+    lcd.print(zora);      
+    lcd.print(ora);
     lcd.print(':');
     lcd.print(zmin);
     lcd.print(min);
