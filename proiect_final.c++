@@ -119,11 +119,11 @@ void print_menu(enum Menus menu)
     	lcd.print(temp);
     	break;
     case MENU_T_INCALZIRE:
-    	lcd.print("t_incalzire = ");
+    	lcd.print("t_incalz = ");
     	lcd.print(t_incalzire);
     	break;
     case MENU_T_MENTINERE:
-    	lcd.print("t_mentinere = ");
+    	lcd.print("t_ment = ");
     	lcd.print(t_mentinere);
     	break;
     case MENU_T_RACIRE:
