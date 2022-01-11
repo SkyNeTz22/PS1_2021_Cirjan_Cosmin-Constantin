@@ -403,7 +403,7 @@ void setup()
   digitalWrite(8, LOW); // pull-down
     pinMode(9, INPUT);
   digitalWrite(9, LOW); // pull-down
-  adc_init();
+
   TCCR1A = 0;
   TCCR1B = 0;
   TCNT1  = 0;
@@ -499,6 +499,7 @@ void loop()
 {
   Numarare_Secunde();
   pid();
+  adc_init();
   analogWrite(10, 255-output);
   
   volatile Buttons event = GetButtons();
