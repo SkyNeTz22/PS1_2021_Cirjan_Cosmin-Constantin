@@ -77,16 +77,16 @@ void print_menu(enum Menus menu)
           break;
       case MENU_START:
           lcd.setCursor(0,0);
-          lcd.print("TI ");
+          lcd.print("TI");
           lcd.print(t_incal);
           lcd.print(" ");
-          lcd.print("TM ");
+          lcd.print("TM");
           lcd.print(t_ment);
           lcd.print(" ");
-          lcd.print("TR ");
+          lcd.print("TR");
           lcd.print(t_rac);
           lcd.setCursor(0,1);
-          lcd.print("T ");
+          lcd.print("T");
           lcd.print(temperatura_citita);
           lcd.print(" ");
           lcd.print("SP ");
@@ -107,15 +107,15 @@ void print_menu(enum Menus menu)
           lcd.print(temp);
           break;
       case MENU_T_INCAL:
-          lcd.print("Timp incalz = ");
+          lcd.print("Temp incalz = ");
           lcd.print(t_incal);
           break;
       case MENU_T_MENT:
-          lcd.print("Timp ment = ");
+          lcd.print("Temp ment = ");
           lcd.print(t_ment);
           break;
       case MENU_T_RAC:
-          lcd.print("Timp racire = ");
+          lcd.print("Temp racire = ");
           lcd.print(t_rac);
 
       /*default:
@@ -132,7 +132,7 @@ void print_menu(enum Menus menu)
   if(current_menu != MENU_MAIN)
   {
   	lcd.setCursor(0,1);
-  	lcd.print("ModificaParam.");
+  	lcd.print("Modifica Var.");
   }
 }
 
@@ -467,7 +467,7 @@ void Numarare_Secunde(void)
 
   else
   {
-    Serial.print("Procesul a fost oprit.");
+    Serial.print("Procesul a fost oprit. Timp scurs :");
     Serial.println(total_seconds);
   }
 
