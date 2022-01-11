@@ -30,14 +30,13 @@ enum Menus {
 
 LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
 unsigned int numar_CAN;
-int voltage_value, temperatura_citita;
+int voltage_value, temperatura_citita=36.0;
 unsigned int temp;
 int t_incal = 5, t_incal_copy;
 double timp_set = 50;
 int t_ment = 5, t_ment_copy;
 int t_rac = 10, t_rac_copy;
 double moving_setpoint;
-float temp_q = 0;
 Menus scroll_menu = MENU_MAIN;
 Menus current_menu = MENU_MAIN;
 enum Menus menu_anterior = MENU_NULL;
@@ -54,7 +53,6 @@ double output = 0;
 int numar;
 unsigned int indentare_pe_secunda = 0;
 float temp_anterioara = -999;
-
 
 void state_machine(enum Menus menu, enum Buttons button);
 Buttons GetButtons(void);
@@ -403,7 +401,6 @@ void setup()
   digitalWrite(8, LOW); // pull-down
     pinMode(9, INPUT);
   digitalWrite(9, LOW); // pull-down
-
   TCCR1A = 0;
   TCCR1B = 0;
   TCNT1  = 0;
